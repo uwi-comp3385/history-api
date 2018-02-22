@@ -18,12 +18,12 @@ window.onload = function() {
 };
 
 var getContent = function (url) {
-  let urlToLoad = (url === '/') ? 'index' : url;
+  let urlToLoad = (url === '/') ? 'index.html' : url;
   // The load() function is a part of the AJAX functions
   // bundled with jQuery and is short hand for making
   // an AJAX call to page and getting the content in an element
   // in this case an element with an id of 'main'.
-  $('#main').load(urlToLoad + '.html #main');
+  $('#main').load(urlToLoad + ' #main');
 };
 
 // Adding popstate event listener to handle browser back button
