@@ -5,10 +5,15 @@ window.onload = function() {
     element.addEventListener('click', function (e) {
       e.preventDefault();
       // console.log(e.target.href);
+      myState = {
+        title: e.target.textContent,
+        url: e.target.href
+      };
+
       let url = e.target.href;
       let linkTitle = e.target.textContent;
       getContent(url, linkTitle);
-      history.pushState(null, linkTitle, url);
+      history.pushState(myState, linkTitle, url);
       // Not all browsers support the 2nd parameter for the title of the history
       // entry, however, you can still put something there.
     });
@@ -32,4 +37,5 @@ window.addEventListener("popstate", function(e) {
   // Get State values using e.state
   getContent(location.pathname);
   // getContent(e.state);
+  // console.log(e.state);
 });
