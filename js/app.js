@@ -37,5 +37,9 @@ window.addEventListener("popstate", function(e) {
   // Get State values using e.state
   getContent(location.pathname);
   // getContent(e.state);
+
+  // Uncomment the line below to see the state object
+  // for each item in history as you hit the back/forward button
+  // in your browser
   // console.log(e.state);
 });
